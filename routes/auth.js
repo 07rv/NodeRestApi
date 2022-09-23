@@ -22,7 +22,7 @@ router.post("/register", async (req, res)=>{
         if(err.keyPattern.email == 1)
             res.status(500).json("Email already exist")
         else if(err.keyPattern.username == 1)
-            res.status(500).json("username already exist")      
+            res.status(500).json("Username already exist")      
         res.status(500).json(err)
     }
 })
