@@ -10,6 +10,7 @@ const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 
 dotenv.config()
+const port = process.env.PORT || 3000
 
 mongoose
     .connect(
@@ -32,6 +33,6 @@ app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("hi...")
 })
