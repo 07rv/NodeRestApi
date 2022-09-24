@@ -30,6 +30,10 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
+
+app.use('/', (req, res) => {
+    res.status(200).json("Hello world");
+})
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
